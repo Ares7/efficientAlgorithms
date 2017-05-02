@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sergey/Documents/TUM/algsPractikum/hw1/t3/main.cpp
+iostream
+-
+vector
+-
+regex
+/Users/sergey/Documents/TUM/algsPractikum/hw1/t3/regex
+
