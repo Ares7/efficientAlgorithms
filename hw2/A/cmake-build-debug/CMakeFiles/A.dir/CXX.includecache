@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sergey/Documents/TUM/algsPractikum/hw2/A/main.cpp
+unordered_map
+-
+vector
+/Users/sergey/Documents/TUM/algsPractikum/hw2/A/vector
+iostream
+/Users/sergey/Documents/TUM/algsPractikum/hw2/A/iostream
+
