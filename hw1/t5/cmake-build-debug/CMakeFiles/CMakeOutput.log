@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is AppleClang, found in "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdC/a.out"
+The C compiler identification is AppleClang, found in "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
@@ -23,38 +23,38 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is AppleClang, found in "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdCXX/a.out"
+The CXX compiler identification is AppleClang, found in "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_7df7c/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_7df7c.dir/build.make CMakeFiles/cmTC_7df7c.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building C object CMakeFiles/cmTC_7df7c.dir/testCCompiler.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc     -o CMakeFiles/cmTC_7df7c.dir/testCCompiler.c.o   -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_7df7c
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7df7c.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_7df7c.dir/testCCompiler.c.o  -o cmTC_7df7c 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_5a6e2/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_5a6e2.dir/build.make CMakeFiles/cmTC_5a6e2.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building C object CMakeFiles/cmTC_5a6e2.dir/testCCompiler.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc     -o CMakeFiles/cmTC_5a6e2.dir/testCCompiler.c.o   -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5a6e2
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a6e2.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5a6e2.dir/testCCompiler.c.o  -o cmTC_5a6e2 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_a818c/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_a818c.dir/build.make CMakeFiles/cmTC_a818c.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building C object CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc     -o CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_a818c
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a818c.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o  -o cmTC_a818c  
+Run Build Command:"/opt/local/bin/gmake" "cmTC_18193/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_18193.dir/build.make CMakeFiles/cmTC_18193.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building C object CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc     -o CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_18193
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18193.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o  -o cmTC_18193  
 Apple LLVM version 8.0.0 (clang-800.0.42.1)
 Target: x86_64-apple-darwin16.4.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_a818c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_18193 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-274.2
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
 Library search paths:
@@ -63,26 +63,26 @@ Library search paths:
 Framework search paths:
 	/Library/Frameworks/
 	/System/Library/Frameworks/
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/opt/local/bin/gmake" "cmTC_a818c/fast"]
-  ignore line: [/opt/local/bin/gmake -f CMakeFiles/cmTC_a818c.dir/build.make CMakeFiles/cmTC_a818c.dir/build]
-  ignore line: [gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten]
-  ignore line: [Building C object CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc     -o CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_a818c]
-  ignore line: [/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a818c.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o  -o cmTC_a818c  ]
+  ignore line: [Run Build Command:"/opt/local/bin/gmake" "cmTC_18193/fast"]
+  ignore line: [/opt/local/bin/gmake -f CMakeFiles/cmTC_18193.dir/build.make CMakeFiles/cmTC_18193.dir/build]
+  ignore line: [gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten]
+  ignore line: [Building C object CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc     -o CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o   -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_18193]
+  ignore line: [/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18193.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o  -o cmTC_18193  ]
   ignore line: [Apple LLVM version 8.0.0 (clang-800.0.42.1)]
   ignore line: [Target: x86_64-apple-darwin16.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_a818c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_18193 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-dynamic] ==> ignore
@@ -91,11 +91,11 @@ Parsed C implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.12.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a818c] ==> ignore
+    arg [cmTC_18193] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_a818c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_18193.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
   Library search paths: [;/usr/lib;/usr/local/lib]
@@ -114,17 +114,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_22bf3/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_22bf3.dir/build.make CMakeFiles/cmTC_22bf3.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building C object CMakeFiles/cmTC_22bf3.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_22bf3.dir/feature_tests.c.o   -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_22bf3
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22bf3.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_22bf3.dir/feature_tests.c.o  -o cmTC_22bf3 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_b8eae/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_b8eae.dir/build.make CMakeFiles/cmTC_b8eae.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building C object CMakeFiles/cmTC_b8eae.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_b8eae.dir/feature_tests.c.o   -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b8eae
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8eae.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b8eae.dir/feature_tests.c.o  -o cmTC_b8eae 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -134,17 +134,17 @@ gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-bu
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_be892/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_be892.dir/build.make CMakeFiles/cmTC_be892.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building C object CMakeFiles/cmTC_be892.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_be892.dir/feature_tests.c.o   -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_be892
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be892.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_be892.dir/feature_tests.c.o  -o cmTC_be892 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_f0fca/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_f0fca.dir/build.make CMakeFiles/cmTC_f0fca.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building C object CMakeFiles/cmTC_f0fca.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_f0fca.dir/feature_tests.c.o   -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f0fca
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0fca.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_f0fca.dir/feature_tests.c.o  -o cmTC_f0fca 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -154,17 +154,17 @@ gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-bu
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_10a3e/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_10a3e.dir/build.make CMakeFiles/cmTC_10a3e.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building C object CMakeFiles/cmTC_10a3e.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_10a3e.dir/feature_tests.c.o   -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_10a3e
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10a3e.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_10a3e.dir/feature_tests.c.o  -o cmTC_10a3e 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_4e638/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_4e638.dir/build.make CMakeFiles/cmTC_4e638.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building C object CMakeFiles/cmTC_4e638.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_4e638.dir/feature_tests.c.o   -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_4e638
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e638.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4e638.dir/feature_tests.c.o  -o cmTC_4e638 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -172,35 +172,35 @@ gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-bu
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_7156c/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_7156c.dir/build.make CMakeFiles/cmTC_7156c.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building CXX object CMakeFiles/cmTC_7156c.dir/testCXXCompiler.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++      -o CMakeFiles/cmTC_7156c.dir/testCXXCompiler.cxx.o -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_7156c
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7156c.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_7156c.dir/testCXXCompiler.cxx.o  -o cmTC_7156c 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_479b6/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_479b6.dir/build.make CMakeFiles/cmTC_479b6.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building CXX object CMakeFiles/cmTC_479b6.dir/testCXXCompiler.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++      -o CMakeFiles/cmTC_479b6.dir/testCXXCompiler.cxx.o -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_479b6
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_479b6.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_479b6.dir/testCXXCompiler.cxx.o  -o cmTC_479b6 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_b7720/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_b7720.dir/build.make CMakeFiles/cmTC_b7720.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building CXX object CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/c++      -o CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_b7720
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7720.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b7720  
+Run Build Command:"/opt/local/bin/gmake" "cmTC_ad6fc/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_ad6fc.dir/build.make CMakeFiles/cmTC_ad6fc.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building CXX object CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++      -o CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_ad6fc
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad6fc.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ad6fc  
 Apple LLVM version 8.0.0 (clang-800.0.42.1)
 Target: x86_64-apple-darwin16.4.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_b7720 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_ad6fc -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-274.2
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
 Library search paths:
@@ -209,26 +209,26 @@ Library search paths:
 Framework search paths:
 	/Library/Frameworks/
 	/System/Library/Frameworks/
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/opt/local/bin/gmake" "cmTC_b7720/fast"]
-  ignore line: [/opt/local/bin/gmake -f CMakeFiles/cmTC_b7720.dir/build.make CMakeFiles/cmTC_b7720.dir/build]
-  ignore line: [gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten]
-  ignore line: [Building CXX object CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++      -o CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_b7720]
-  ignore line: [/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7720.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b7720  ]
+  ignore line: [Run Build Command:"/opt/local/bin/gmake" "cmTC_ad6fc/fast"]
+  ignore line: [/opt/local/bin/gmake -f CMakeFiles/cmTC_ad6fc.dir/build.make CMakeFiles/cmTC_ad6fc.dir/build]
+  ignore line: [gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten]
+  ignore line: [Building CXX object CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++      -o CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_ad6fc]
+  ignore line: [/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad6fc.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ad6fc  ]
   ignore line: [Apple LLVM version 8.0.0 (clang-800.0.42.1)]
   ignore line: [Target: x86_64-apple-darwin16.4.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_b7720 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_ad6fc -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-dynamic] ==> ignore
@@ -237,11 +237,11 @@ Parsed CXX implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.12.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b7720] ==> ignore
+    arg [cmTC_ad6fc] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_b7720.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_ad6fc.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
     arg [/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
@@ -261,17 +261,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_08c8f/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_08c8f.dir/build.make CMakeFiles/cmTC_08c8f.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building CXX object CMakeFiles/cmTC_08c8f.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_08c8f.dir/feature_tests.cxx.o -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_08c8f
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08c8f.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_08c8f.dir/feature_tests.cxx.o  -o cmTC_08c8f 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_b9d1c/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_b9d1c.dir/build.make CMakeFiles/cmTC_b9d1c.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building CXX object CMakeFiles/cmTC_b9d1c.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_b9d1c.dir/feature_tests.cxx.o -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b9d1c
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9d1c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b9d1c.dir/feature_tests.cxx.o  -o cmTC_b9d1c 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -334,17 +334,17 @@ gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-bu
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_8035a/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_8035a.dir/build.make CMakeFiles/cmTC_8035a.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building CXX object CMakeFiles/cmTC_8035a.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_8035a.dir/feature_tests.cxx.o -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8035a
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8035a.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_8035a.dir/feature_tests.cxx.o  -o cmTC_8035a 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_0134d/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_0134d.dir/build.make CMakeFiles/cmTC_0134d.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building CXX object CMakeFiles/cmTC_0134d.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_0134d.dir/feature_tests.cxx.o -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0134d
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0134d.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_0134d.dir/feature_tests.cxx.o  -o cmTC_0134d 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -407,17 +407,17 @@ gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-bu
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/opt/local/bin/gmake" "cmTC_f7cff/fast"
-/opt/local/bin/gmake -f CMakeFiles/cmTC_f7cff.dir/build.make CMakeFiles/cmTC_f7cff.dir/build
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
-Building CXX object CMakeFiles/cmTC_f7cff.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_f7cff.dir/feature_tests.cxx.o -c /Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f7cff
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7cff.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_f7cff.dir/feature_tests.cxx.o  -o cmTC_f7cff 
-gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
+Run Build Command:"/opt/local/bin/gmake" "cmTC_ec4c0/fast"
+/opt/local/bin/gmake -f CMakeFiles/cmTC_ec4c0.dir/build.make CMakeFiles/cmTC_ec4c0.dir/build
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird betreten
+Building CXX object CMakeFiles/cmTC_ec4c0.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_ec4c0.dir/feature_tests.cxx.o -c /Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ec4c0
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec4c0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++     -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_ec4c0.dir/feature_tests.cxx.o  -o cmTC_ec4c0 
+gmake[1]: Verzeichnis "/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmake-build-debug/CMakeFiles/CMakeTmp" wird verlassen
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

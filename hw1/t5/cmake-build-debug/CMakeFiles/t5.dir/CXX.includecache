@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/sergey/Documents/TUM/algsPractikum/hw1/t5/main.cpp
+/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/main.cpp
 iostream
 -
 vector
 -
+cmath
+/Users/sergey/Documents/TUM/1algsPractikum/hw1/t5/cmath
 
