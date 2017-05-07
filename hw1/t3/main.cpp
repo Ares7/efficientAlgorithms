@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     std::ios::sync_with_stdio(false);
-//
+
     int t = 1;
     int n = 3;
 
