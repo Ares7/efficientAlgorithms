@@ -224,7 +224,7 @@ int main() {
             ds.parent[ff].m  = -99;
             ds.parent[gg].m  = -99;
         }
-        printSets(i, ds);
+        //printSets(i, ds);
 
 
         /*
@@ -260,7 +260,12 @@ int main() {
         }
 
         //cout << "Best potential Candiadate ID is: "<< max+1<< endl;
-        vbest.push_back(ds.parent[indx].m);
+        if (sum>=0)
+            vbest.push_back(ds.parent[indx].m);
+        else
+        {
+            vbest.push_back(-99);
+        }
         //cin.ignore();
 
 
