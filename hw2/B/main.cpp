@@ -26,11 +26,20 @@ int main() {
         cin>>d >> p>> u>>v;
         //cin.ignore();
 
+        //double s = (d)/(double)p;
+
+//        if(u == 0 && v==d && p >2)
+//        {
+//            s = 0;
+//            dists.push_back(s);
+//            break;
+//        }
+
         double s = (d- (v-u))/(double)p;
 
         if(s==0)
         {
-            s = d/4;
+            s = (double)d/4;
         }
 
         double step = s/2;
@@ -42,7 +51,7 @@ int main() {
             points.push_back(prval);
 
             //Perform points assignment:
-            for (int i = 1; i <= p; ++i)
+            for (int i = 2; i <= p; ++i)
             {
 
                 if(prval+s <= u)
@@ -53,6 +62,7 @@ int main() {
                 else if (prval+s > u && prval+s < v)
                 {
                     prval = v-s;
+                    i--;
                 }
                 else if(prval+s >= v)
                 {
