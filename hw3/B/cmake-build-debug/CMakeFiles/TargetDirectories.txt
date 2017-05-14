@@ -1,0 +1,3 @@
+/Users/sergey/Documents/TUM/1algsPractikum/hw3/B/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/sergey/Documents/TUM/1algsPractikum/hw3/B/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sergey/Documents/TUM/1algsPractikum/hw3/B/cmake-build-debug/CMakeFiles/B.dir
