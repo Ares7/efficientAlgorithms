@@ -93,13 +93,13 @@ struct edges {
     int b;
     int w;
 
-    //for the sorting by the weight of the sound
+    //for the sorting by the capcity of the road.
     bool operator()(const edges &x, const edges &y) const {
-        return x.w < y.w;
+        return x.w > y.w;
     }
 };
 
-typedef struct Graph {
+typedef struct InputSet {
 
     vector<edges> ve;
 } Graph;
@@ -143,7 +143,7 @@ int main() {
     //Read input data
     for (int k = 0; k < t; ++k)
     {
-        Graph gr;
+        InputSet gr;
 
         res.clear();
 
@@ -232,14 +232,7 @@ int main() {
                 res.push_back(efin);
 
             }
-//            else if(n==1)
-//            {
-//                efin.a = gr.ve[m].a;
-//                efin.b = gr.ve[m].b;
-//                efin.w = gr.ve[m].w;
-//
-//                res.push_back(efin);
-//            }
+
             else
             {
                 continue;
