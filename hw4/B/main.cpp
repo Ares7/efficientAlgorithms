@@ -5,6 +5,12 @@
 
 using namespace std;
 
+typedef struct selectedStations
+{
+    int length;
+    vector<int> st;
+}selectedStations;
+
 
 class Graph {
 
@@ -13,13 +19,15 @@ class Graph {
     list<pair<int, int> >::iterator i;
 
 
-
 public:
 
-    array<int, 1000> visited;
-    array<int, 1000>  pred;
-    array<int, 1000> dist;
+    array<int, 250> visited;
+    array<int, 250> pred;
+    array<int, 250> dist;
 
+    vector<int> stations;
+
+public:
 
 
 
@@ -28,9 +36,9 @@ public:
         neigb = new list<pair<int, int> >[*n];
     }
 
-    void FillGraph(int *n, int *m)
-    {
+    void FillGraph(int *n, int *m, int *s) {
 
+        int si;
         // read every line of the sound block
         for (int i = 0; i < *m; ++i)
         {
@@ -41,15 +49,19 @@ public:
             neigb[b - 1].push_back(make_pair(a - 1, w));
         }
 
+        for (int j = 0; j < *s; ++j)
+        {
+            cin >> si;
+            stations.push_back(si);
+        }
+
     }
 
-    bool operator()(pair<int, int> n1, pair<int, int> n2)
-    {
+    bool operator()(pair<int, int> n1, pair<int, int> n2) {
         return n1.second > n2.second;
     }
 
-    void DijkstrsSP(int *m)
-    {
+    void DijkstrsSP(int *m) {
 
 
         /*
@@ -71,9 +83,9 @@ public:
         dist[0] = 0;
         pred[0] = -99;
 
-        pq.push(make_pair( 0, 0));
+        pq.push(make_pair(0, 0));
 
-        while(!pq.empty())
+        while (!pq.empty())
         {
             int u = pq.top().second;
             pq.pop();
@@ -85,24 +97,23 @@ public:
                 int v = (*i).first;
                 int weight = (*i).second;
 
-                if(dist[v] > (dist[u] + weight))
+                if (dist[v] > (dist[u] + weight))
                 {
                     visited[v] = 0;
                 }
-                if(visited[v] == 0)
+                if (visited[v] == 0)
                 {
-                    if(dist[v] > dist[u] + weight)
+                    if (dist[v] > dist[u] + weight)
                     {
                         dist[v] = dist[u] + weight;
 
                         // re-check all nodes that have incoming edge
                         // from the updated node to update their distances.
 
-                        pq.push(make_pair( dist[v] + weight, v));
-                        pred[v]=u;
+                        pq.push(make_pair(dist[v] + weight, v));
+                        pred[v] = u;
                         visited[v] = 0;
-                    }
-                    else
+                    } else
                     {
                         visited[v] = 1;
                     }
@@ -114,7 +125,6 @@ public:
         }
 
 
-
     }
 };
 
@@ -124,32 +134,58 @@ int main() {
     std::ios::sync_with_stdio(false);
 
     int t = 1;
-    int n, m;
-
+    int n, m, s;
 
 
     cin >> t;
     cin.ignore();
 
 
-    vector<int> v;
+    //vector<int> v;
 
+
+    vector <selectedStations> vfin;
     //Read input data
     for (int k = 0; k < t; ++k)
     {
-        cin >> n >> m;
+        cin >> n >> m >> s;
         Graph gr(&n);
 
         gr.visited.fill(0);
         gr.pred.fill(-99);
         gr.dist.fill(9999);
 
+        selectedStations selStat;
+        //vfin.clear();
+        //gr.stations.fill(-1);
 
 
-        gr.FillGraph(&n, &m);
+        gr.FillGraph(&n, &m, &s);
         gr.DijkstrsSP(&m);
 
-        v.push_back(gr.dist[n-1]);
+
+        int mdx = gr.stations[0] - 1;
+        for (int i = 0; i < s; ++i)
+        {
+
+            if (gr.dist[gr.stations[i] - 1] < gr.dist[mdx])
+            {
+                mdx = gr.stations[i] - 1;
+            }
+        }
+
+
+        selStat.length = gr.dist[mdx];
+
+        for (int j = 0; j < s; ++j)
+        {
+            if(gr.dist[gr.stations[j] -1] == gr.dist[mdx])
+            {
+                selStat.st.push_back(gr.stations[j]);
+
+            }
+        }
+        vfin.push_back(selStat);
 
     }
 
@@ -161,7 +197,12 @@ int main() {
 
         cout << "Case #" << j + 1 << ": ";
 
-            cout << v[j] << " ";
+        cout << vfin[j].length << " ";
+
+        for (int i = 0; i < vfin[j].st.size(); ++i)
+        {
+            cout<< vfin[j].st[i] << " ";
+        }
 
         cout << endl;
     }

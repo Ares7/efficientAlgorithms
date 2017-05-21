@@ -1,4 +1,4 @@
-# Install script for directory: /Users/sergey/Documents/TUM/1algsPractikum/hw4/A
+# Install script for directory: /Users/sergey/Documents/TUM/1algsPractikum/hw4/B
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/sergey/Documents/TUM/1algsPractikum/hw4/A/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/sergey/Documents/TUM/1algsPractikum/hw4/B/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
