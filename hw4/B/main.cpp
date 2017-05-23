@@ -3,16 +3,24 @@
 #include <queue>
 #include <array>
 
+#include <algorithm>
+
 using namespace std;
 
 typedef struct selectedStations
 {
     int length;
     vector<int> st;
-}selectedStations;
+
+    bool operator()(int i, int j)
+    {
+        return (i < j);
+    }
+} selectedStations;
 
 
-class Graph {
+class Graph
+{
 
     int N;
     list<pair<int, int> > *neigb;
@@ -30,16 +38,17 @@ public:
 public:
 
 
-
-    Graph(int *n) {
+    Graph(int *n)
+    {
         this->N = *n;
         neigb = new list<pair<int, int> >[*n];
     }
 
-    void FillGraph(int *n, int *m, int *s) {
+    void FillGraph(int *n, int *m, int *s)
+    {
 
         int si;
-        // read every line of the sound block
+
         for (int i = 0; i < *m; ++i)
         {
             int a, b, w;
@@ -57,11 +66,9 @@ public:
 
     }
 
-    bool operator()(pair<int, int> n1, pair<int, int> n2) {
-        return n1.second > n2.second;
-    }
 
-    void DijkstrsSP(int *m) {
+    void DijkstrsSP(int *m)
+    {
 
 
         /*
@@ -113,7 +120,8 @@ public:
                         pq.push(make_pair(dist[v] + weight, v));
                         pred[v] = u;
                         visited[v] = 0;
-                    } else
+                    }
+                    else
                     {
                         visited[v] = 1;
                     }
@@ -129,7 +137,8 @@ public:
 };
 
 
-int main() {
+int main()
+{
 
     std::ios::sync_with_stdio(false);
 
@@ -144,7 +153,7 @@ int main() {
     //vector<int> v;
 
 
-    vector <selectedStations> vfin;
+    vector<selectedStations> vfin;
     //Read input data
     for (int k = 0; k < t; ++k)
     {
@@ -179,12 +188,15 @@ int main() {
 
         for (int j = 0; j < s; ++j)
         {
-            if(gr.dist[gr.stations[j] -1] == gr.dist[mdx])
+            if (gr.dist[gr.stations[j] - 1] == gr.dist[mdx])
             {
                 selStat.st.push_back(gr.stations[j]);
 
             }
         }
+
+        sort(selStat.st.begin(), selStat.st.end(), selectedStations());
+
         vfin.push_back(selStat);
 
     }
@@ -201,7 +213,7 @@ int main() {
 
         for (int i = 0; i < vfin[j].st.size(); ++i)
         {
-            cout<< vfin[j].st[i] << " ";
+            cout << vfin[j].st[i] << " ";
         }
 
         cout << endl;
