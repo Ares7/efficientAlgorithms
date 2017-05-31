@@ -38,16 +38,17 @@ public:
     typedef struct shops
     {
         int time;
-    }shops;
+    } shops;
 
 
     unordered_map<int, shops> shopList;
 
-    int globalshopTime = INT_MAX;
+    int totalTravelTime = 999999999;
     int hasvisitedShop = 0;
     int posA;
     int posB;
 
+    int isImpShop = 0;
 
     Graph()
     {
@@ -58,41 +59,29 @@ public:
     OutTime transformTime(int numMinutes)
     {
         OutTime ot;
-        if ((numMinutes / 60) == 1)
+        ot.hours = numMinutes / 60;
+        if(numMinutes % 60 == 0)
         {
-            printf("%01d hour", numMinutes / 60);
+            ot.min = "00";
         }
         else
         {
-            printf("%01d hours", numMinutes / 60);
+            ot.min = to_string(numMinutes % 60);
         }
 
-        if ((numMinutes % 60) == 1)
-        {
-            printf(" %01d minute\n", numMinutes % 60);
-        }
-        else
-        {
-            printf(" %01d minutes\n", numMinutes % 60);
-        }
 
         return ot;
     }
 
-    void FillGraph()
+    int FillGraph()
     {
         int n, m, s, a, b;
         cin >> n >> m >> s >> a >> b;
+        OutTime ot;
+        list<pair<int, int> >::iterator xptr;
+        list<pair<int, int> >::iterator yptr;
 
 
-        if (s == 0)
-        {
-            OutTime ot;
-            //the case is completely screwed.
-            ot.hours = -2;
-            v.push_back(ot);
-            return;
-        }
         this->N = n;
         this->posA = a - 1;
         this->posB = b - 1;
@@ -103,11 +92,12 @@ public:
 
             int x, y, z;
             cin >> x >> y >> z;
-
+            //if not self-looped
             if (x != y)
             {
-                neigb[x-1].push_back(make_pair(y-1, z));
-                neigb[y-1].push_back(make_pair(x-1, z));
+                //if we add additional edge with smaller or bigger weight value.
+                neigb[x - 1].push_back(make_pair(y - 1, z));
+                neigb[y - 1].push_back(make_pair(x - 1, z));
             }
 
         }
@@ -117,18 +107,37 @@ public:
         {
             cin >> si >> wi;
 
-            if (shopList[si-1].time > wi || shopList[si-1].time== 0)
+            if (shopList[si - 1].time > wi || shopList[si - 1].time == 0)
             {
-                shopList[si-1].time = wi;
+                shopList[si - 1].time = wi;
             }
         }
 
+        if (s == 0)
+        {
+            //the case is completely screwed.
+            ot.hours = -2;
+            v.push_back(ot);
+            isImpShop = 1;
+            return -1;
+        }
+        if (m == 0 && a != b)
+        {
+            //the case is completely screwed.
+            ot.hours = -2;
+            v.push_back(ot);
+            isImpShop = 1;
+            return -1;
+        }
+
+        return 0;
     }
 
 
     void BellmanFord(int shopTime)
     {
         //int shopTime = 99999999;
+
 
         /*
          1. go through every node as in normal BFord.
@@ -166,7 +175,6 @@ public:
         //vertex, weight
         priority_queue<pair<int, int>, vector<pair<int, int> > > pq;
 
-        //TODO: DEFINE CORRECT START AND END
         visited[this->posA] = 0;
 
         dist[this->posA] = 0;
@@ -174,7 +182,7 @@ public:
 
         int phase = 0;
 
-        if(shopList[this->posA].time == shopTime)
+        if (shopList[this->posA].time == shopTime)
         {
             //dist[this->posA] = shopTime;
             shopped[this->posA] = shopTime;
@@ -190,7 +198,7 @@ public:
             int u = pq.top().first;
             pq.pop();
 
-            if(shopList[u].time > 0 && shopList[u].time == shopTime)
+            if (shopList[u].time == shopTime)
             {
                 this->hasvisitedShop = 1;
                 shopped[u] = shopTime;
@@ -204,7 +212,7 @@ public:
                 int weight = (*i).second;
 
 
-                if (dist[v] > (dist[u] + weight ))
+                if (dist[v] > (dist[u] + weight))
                 {
                     visited[v] = 0;
                 }
@@ -220,7 +228,10 @@ public:
                         pq.push(make_pair(v, dist[v]));
                         pred[v] = u;
                         visited[v] = 0;
-                        shopped[v] = shopTime;
+                        if (hasvisitedShop == 1)
+                        {
+                            shopped[v] = shopTime;
+                        }
                     }
 
                     else
@@ -229,9 +240,11 @@ public:
                     }
 
                 }
-                else if(visited[v] == 1 && shopped[v]==0 && this->hasvisitedShop == 1)
+                //visited[v] == 1 &&
+                if (shopped[v] == 0 && this->hasvisitedShop == 1)
                 {
-                    pq.push(make_pair(v, dist[v]));
+                    dist[v] = 999999999;
+                    pq.push(make_pair(u, dist[u]));
                     visited[v] = 0;
                 }
 
@@ -251,12 +264,8 @@ int main()
 
     int t = 1;
 
-
     cin >> t;
     cin.ignore();
-
-
-    //
 
     //Read input data
     for (int k = 0; k < t; ++k)
@@ -264,38 +273,53 @@ int main()
 
         Graph gr;
         OutTime out1;
+        gr.shopList.clear();
+        gr.totalTravelTime = 999999999;
 
-        gr.visited.fill(0);
-        gr.pred.fill(-99);
-        gr.dist.fill(INT_MAX);
-        gr.shopped.fill(0);
-
-        gr.FillGraph();
-
-        //goes through values, not keys
-        for (auto i: gr.shopList)
+        //graph was filled successfully
+        if (gr.FillGraph() == 0)
         {
-            gr.BellmanFord(i.second.time);
-
-            //TODO shoped B still holds val of 20 after
-            // node with shop of 15 went though.
-            if (gr.globalshopTime > gr.shopped[gr.posB] && gr.hasvisitedShop == 1)
+            int numShops = 0;
+            //goes through values, not keys
+            for (auto i: gr.shopList)
             {
-                gr.globalshopTime = gr.shopped[gr.posB];
+                numShops++;
+                gr.shopped.fill(0);
+                gr.visited.fill(0);
+                gr.pred.fill(-99);
+                gr.dist.fill(999999999);
+                gr.hasvisitedShop = 0;
+                gr.BellmanFord(i.second.time);
+
+
+                if (gr.isImpShop == 0)
+                {
+                    if (gr.totalTravelTime > gr.shopped[gr.posB] + gr.dist[gr.posB] && gr.hasvisitedShop == 1)
+                    {
+                        gr.totalTravelTime = gr.shopped[gr.posB] + gr.dist[gr.posB];
+                    }
+
+                }
+                else
+                {
+                    gr.isImpShop = 0;
+                    continue;
+                }
+
             }
-            else if(gr.hasvisitedShop == 0)
+
+            //perform time transform.
+            if (gr.hasvisitedShop == 0 && numShops == gr.shopList.size())
             {
                 out1.hours = -1;
                 v.push_back(out1);
             }
+            else
+            {
+                out1 = gr.transformTime(gr.totalTravelTime);
+                v.push_back(out1);
+            }
         }
-
-        //perform time tranform.
-
-        OutTime ot;
-        ot = gr.transformTime(gr.globalshopTime);
-
-        v.push_back(ot);
 
 
     }
@@ -307,13 +331,14 @@ int main()
     {
 
         cout << "Case #" << j + 1 << ": ";
-        if (v[j].hours == -1)
+
+        if (v[j].hours == -1 || v[j].hours == -2)
         {
             cout << "impossible";
         }
         else
         {
-            cout << "correct time";
+            cout << v[j].hours << ":" << v[j].min;
         }
         cout << endl;
     }
