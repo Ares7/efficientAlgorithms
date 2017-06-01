@@ -1,68 +1,58 @@
 #include <iostream>
 #include <list>
 #include <queue>
-#include <array>
-#include <unordered_map>
 
 using namespace std;
 
-
 typedef struct OutTime
 {
-    int hours;
+    long long int hours;
     string min;
 }
-OutTime;
+        OutTime;
 
 vector<OutTime> v;
 
 class Graph
 {
 
-    int N;
+    long long int N;
     //first: node, second its weight
 public:
-    list<pair<int, int> > *neigb;
-    list<pair<int, int> >::iterator i;
+    list<pair<long long int, long long int> > *neigb;
+    list<pair<long long int, long long int> >::iterator i;
 
 
 public:
-
-    array<int, 10000> visited;
-    array<int, 10000> pred;
-    array<int, 10000> dist;
-
-    //if the node has been visited after the shop.
-    array<int, 10000> shopped;
 
     typedef struct shops
     {
-        int time;
+        long long int node;
+        long long int time;
     } shops;
 
 
-    unordered_map<int, shops> shopList;
+    vector<shops> shopList;
 
-    int totalTravelTime = 999999999;
-    int hasvisitedShop = 0;
-    int posA;
-    int posB;
+    long long int posA;
+    long long int posB;
 
-    int isImpShop = 0;
+    long long int isImpShop = 0;
 
-    Graph()
-    {
-
-    }
+    long long int impCase = 0;
 
 
-    OutTime transformTime(int numMinutes)
+    OutTime transformTime(long long int numMinutes)
     {
         OutTime ot;
         ot.hours = numMinutes / 60;
-        if(numMinutes % 60 == 0)
+        if (numMinutes % 60 == 0)
         {
             ot.min = "00";
+        }
+        else if (numMinutes >= 1 && numMinutes <= 9)
+        {
+            ot.min = "0" + to_string(numMinutes % 60);
         }
         else
         {
@@ -73,24 +63,26 @@ public:
         return ot;
     }
 
-    int FillGraph()
+    long long int FillGraph()
     {
-        int n, m, s, a, b;
+        long long int n, m, s, a, b;
         cin >> n >> m >> s >> a >> b;
         OutTime ot;
-        list<pair<int, int> >::iterator xptr;
-        list<pair<int, int> >::iterator yptr;
+        shops sps;
+
+        list<pair<long long int, long long int> >::iterator xptr;
+        list<pair<long long int, long long int> >::iterator yptr;
 
 
         this->N = n;
         this->posA = a - 1;
         this->posB = b - 1;
-        neigb = new list<pair<int, int> >[n];
+        neigb = new list<pair<long long int, long long int> >[n];
 
-        for (int i = 0; i < m; ++i)
+        for (long long int i = 0; i < m; ++i)
         {
 
-            int x, y, z;
+            long long int x, y, z;
             cin >> x >> y >> z;
             //if not self-looped
             if (x != y)
@@ -102,15 +94,16 @@ public:
 
         }
 
-        int si = 0, wi = 0;
-        for (int j = 0; j < s; ++j)
+        long long int si = 0, wi = 0;
+        for (long long int j = 0; j < s; ++j)
         {
             cin >> si >> wi;
 
-            if (shopList[si - 1].time > wi || shopList[si - 1].time == 0)
-            {
-                shopList[si - 1].time = wi;
-            }
+            sps.node = si-1;
+            sps.time = wi;
+
+            shopList.push_back(sps);
+
         }
 
         if (s == 0)
@@ -134,32 +127,8 @@ public:
     }
 
 
-    void BellmanFord(int shopTime)
+    void Dijkstra(long long int fromPt, long long int vst[10000], long long int dst[], long long int prd[])
     {
-        //int shopTime = 99999999;
-
-
-        /*
-         1. go through every node as in normal BFord.
-         2. if node has a shop (shops[i] < 9999) chk if its value is
-            less than the shop we have already visited. if its less,
-            then assign the global value of the shop this new value.
-
-         3. update the shop value and he dist only if the the dist
-            of pred plus the prev shop value plus
-            weight of the connecting edge(which one? -> every)
-            is less than the current distance from the root plus current value
-            of the shop.
-            put the updated node int othe queue.
-
-            once we see the shop node for the 1st time,
-            we set the global val of the shop to the val of the shop
-            and all subsequent node steps will eploy this value or smth more
-            optimal value.
-
-         */
-
-
         /*
        template<
             class T,
@@ -173,79 +142,54 @@ public:
          */
 
         //vertex, weight
-        priority_queue<pair<int, int>, vector<pair<int, int> > > pq;
+        priority_queue<pair<long long int, long long int>, vector<pair<long long int, long long int> > > pq;
 
-        visited[this->posA] = 0;
+        vst[fromPt] = 0;
 
-        dist[this->posA] = 0;
-        pred[this->posA] = -99;
-
-        int phase = 0;
-
-        if (shopList[this->posA].time == shopTime)
-        {
-            //dist[this->posA] = shopTime;
-            shopped[this->posA] = shopTime;
-            this->hasvisitedShop = 1;
-        }
-
+        dst[fromPt] = 0;
+        prd[fromPt] = -99;
 
         //1rg: node 0 with 2nd arg: weight = 0
-        pq.push(make_pair(this->posA, 0));
+        pq.push(make_pair(fromPt, 0));
 
         while (!pq.empty())
         {
-            int u = pq.top().first;
+            long long int u = pq.top().first;
             pq.pop();
 
-            if (shopList[u].time == shopTime)
-            {
-                this->hasvisitedShop = 1;
-                shopped[u] = shopTime;
-            }
 
             for (i = neigb[u].begin(); i != neigb[u].end(); ++i)
             {
                 // Get vertex label and weight of current adjacent
                 // of u.
-                int v = (*i).first;
-                int weight = (*i).second;
+                long long int v = (*i).first;
+                long long int weight = (*i).second;
 
 
-                if (dist[v] > (dist[u] + weight))
+                if (dst[v] > (dst[u] + weight))
                 {
-                    visited[v] = 0;
+                    vst[v] = 0;
                 }
-                if (visited[v] == 0)
+                if (vst[v] == 0)
                 {
-                    if (dist[v] > dist[u] + weight)
+                    if (dst[v] > dst[u] + weight)
                     {
-                        dist[v] = dist[u] + weight;
+                        dst[v] = dst[u] + weight;
 
                         // re-check all nodes that have incoming edge
                         // from the updated node to update their distances.
 
-                        pq.push(make_pair(v, dist[v]));
-                        pred[v] = u;
-                        visited[v] = 0;
-                        if (hasvisitedShop == 1)
-                        {
-                            shopped[v] = shopTime;
-                        }
+                        pq.push(make_pair(v, dst[v]));
+                        prd[v] = u;
+                        vst[v] = 0;
+
                     }
 
                     else
                     {
-                        visited[v] = 1;
+                        vst[v] = 1;
                     }
 
-                }
-                //visited[v] == 1 &&
-                if (shopped[v] == 0 && this->hasvisitedShop == 1)
-                {
-                    dist[v] = 999999999;
-                    pq.push(make_pair(u, dist[u]));
-                    visited[v] = 0;
                 }
 
 
@@ -262,63 +206,67 @@ int main()
 
     std::ios::sync_with_stdio(false);
 
-    int t = 1;
+    long long int t = 1;
 
     cin >> t;
     cin.ignore();
 
     //Read input data
-    for (int k = 0; k < t; ++k)
+    for (long long int k = 0; k < t; ++k)
     {
 
         Graph gr;
         OutTime out1;
         gr.shopList.clear();
-        gr.totalTravelTime = 999999999;
 
         //graph was filled successfully
         if (gr.FillGraph() == 0)
         {
-            int numShops = 0;
-            //goes through values, not keys
-            for (auto i: gr.shopList)
+            long long int visitedA[10000], distA[10000], predA[10000];
+            long long int visitedB[10000], distB[10000], predB[10000];
+            fill(visitedA, visitedA + 10000, 0);
+            fill(distA, distA + 10000, 9223372036854775807);
+            fill(predA, predA + 10000, -99);
+
+            fill(visitedB, visitedB + 10000, 0);
+            fill(distB, distB + 10000, 9223372036854775807);
+            fill(predB, predB + 10000, -99);
+
+
+            gr.Dijkstra(gr.posA, visitedA, distA, predA);
+            gr.Dijkstra(gr.posB, visitedB, distB, predB);
+
+            long long int minDist = 9223372036854775807;
+            for (long long int i = 0; i < gr.shopList.size(); ++i)
             {
-                numShops++;
-                gr.shopped.fill(0);
-                gr.visited.fill(0);
-                gr.pred.fill(-99);
-                gr.dist.fill(999999999);
-                gr.hasvisitedShop = 0;
-                gr.BellmanFord(i.second.time);
-
-
-                if (gr.isImpShop == 0)
+                long long int dA = distA[gr.shopList[i].node];
+                long long int dB = distB[gr.shopList[i].node];
+                long long int dt  = gr.shopList[i].time;
+                if((dA >= 9223372036854775807 || dB >= 9223372036854775807))
                 {
-                    if (gr.totalTravelTime > gr.shopped[gr.posB] + gr.dist[gr.posB] && gr.hasvisitedShop == 1)
-                    {
-                        gr.totalTravelTime = gr.shopped[gr.posB] + gr.dist[gr.posB];
-                    }
-
-                }
-                else
-                {
-                    gr.isImpShop = 0;
                     continue;
+                }
+                else if (minDist > (dA + dB + dt))
+                {
+                    minDist  = dA + dB + dt;
                 }
 
             }
 
-            //perform time transform.
-            if (gr.hasvisitedShop == 0 && numShops == gr.shopList.size())
+            if (minDist >= 9223372036854775807)
             {
+                //gr.impCase = 0;
                 out1.hours = -1;
                 v.push_back(out1);
             }
             else
             {
-                out1 = gr.transformTime(gr.totalTravelTime);
+                out1 = gr.transformTime(minDist);
                 v.push_back(out1);
             }
+
+
+
         }
 
 
@@ -327,7 +275,7 @@ int main()
 
     cout << endl;
 
-    for (int j = 0; j < t; ++j)
+    for (long long int j = 0; j < t; ++j)
     {
 
         cout << "Case #" << j + 1 << ": ";
