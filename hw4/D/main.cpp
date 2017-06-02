@@ -50,13 +50,13 @@ public:
         {
             ot.min = "00";
         }
-        else if (numMinutes >= 1 && numMinutes <= 9)
+        else if ( (numMinutes % 60) <= 9 || numMinutes <= 9)
         {
-            ot.min = "0" + to_string(numMinutes % 60);
+            ot.min = "0" + to_string(numMinutes);
         }
         else
         {
-            ot.min = to_string(numMinutes % 60);
+            ot.min = to_string(numMinutes);
         }
 
 
@@ -127,7 +127,7 @@ public:
     }
 
 
-    void Dijkstra(long long int fromPt, long long int vst[10000], long long int dst[], long long int prd[])
+    void Dijkstra(long long int fromPt, long long int vst[], long long int dst[], long long int prd[])
     {
         /*
        template<
