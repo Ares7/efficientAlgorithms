@@ -7,8 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/sergey/Documents/TUM/1algsPractikum/hw6/A/main.cpp
-stdio.h
--
 iostream
+-
+vector
 -
 
