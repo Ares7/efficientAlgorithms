@@ -18,6 +18,57 @@ typedef struct ans
 
 vector<ans1> v;
 
+
+bool isInitSafe(char** board, int row, int col)
+{
+    int i, j;
+
+    /* Check this row on left side */
+    for (i = 0; i < col; i++)
+        if ( board[row][i] == 'x' && board[row][col]=='x' )
+            return false;
+
+    /* Check this row on right side */
+    for (i = col+1; i < N; i++)
+        if ( board[row][i] == 'x' && board[row][col]=='x')
+            return false;
+
+    /* Check upper diagonal on left side */
+    for (i=row-1, j=col-1; i>=0 && j>=0; i--, j--)
+        if ( board[i][j] == 'x' && board[row][col]=='x')
+            return false;
+
+    /* Check lower diagonal on left side */
+    for (i=row+1, j=col-1; j>=0 && i<N; i++, j--)
+        if (board[i][j] == 'x' && board[row][col]=='x')
+            return false;
+
+    //chk the presence of a permanent node of the right side:
+
+    /* Check upper diagonal on right side */
+    for (i=row-1, j=col+1; i>=0 && j<N; i--, j++)
+        if (board[i][j] == 'x' && board[row][col]=='x')
+            return false;
+
+    /* Check lower diagonal on right side */
+    for (i=row+1, j=col+1; j<N && i<N; i++, j++)
+        if ( board[i][j] == 'x' && board[row][col]=='x')
+            return false;
+
+    /* Check TOP and BOT*/
+    for (i=0; i<N ; i++)
+    {
+        if (board[i][col] == 'x' && i!=row && board[row][col]=='x')
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
+
 bool isSafe(char** board, int row, int col)
 {
     int i, j;
@@ -149,19 +200,21 @@ int main()
             continue;
         }
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n && aw.imp != "impossible"; i++)
         {
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < n && aw.imp != "impossible"; j++)
             {
-//                if (isSafe(board, i, j, 0) == false && n!=1)
-//                {
-//                    aw.imp = "impossible";
-//                }
+                if (isInitSafe(board, i, j) == false && n!=1)
+                {
+                    aw.imp = "impossible";
+                    //v.push_back(aw);
+                    //continue;
+                }
             }
         }
 
 
-        if ( solveNQUtil(board, 0) == false && n!=1)
+        if ( solveNQUtil(board, 0) == false && n!=1 && aw.imp != "impossible")
         {
             aw.imp = "impossible";
         }
@@ -184,7 +237,7 @@ int main()
 
     }
 
-
+    cout<<endl;
     for (int l = 0; l < v.size(); ++l)
     {
         cout<<"Case #" << l+1<<":";
