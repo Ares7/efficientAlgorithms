@@ -1,0 +1,90 @@
+2
+5 4 4
++_+_+
+_____
++_++_
++_++_
+hi
+music
+tuna
+can
+
+8 8 4
++++_____
++++_++++
+_____+++
++++_++++
++___++++
++++_++++
++++_++++
++_____++
+sword
+axe
+stiletto
+flail
+
+
+Case #1:
++t+h+
+music
++n++a
++a++n
+
+Case #2:
++++sword
++++t++++
+flail+++
++++l++++
++axe++++
++++t++++
++++t++++
++sword++
+
+
+
+
+2
+6 6 4
+++_+++
++____+
+___+__
++_++_+
++____+
+++_+++
+pain
+nice
+pal
+id
+
+6 5 9
++_++++
++___++
+____++
++____+
++++_++
+ear
+eve
+red
+dead
+deal
+grow
+move
+weak
+week
+
+
+
+Case #1:
+++p+++
++pain+
+pal+id
++i++c+
++nice+
+++d+++
+
+Case #2:
++g++++
++red++
+move++
++weak+
++++l++
