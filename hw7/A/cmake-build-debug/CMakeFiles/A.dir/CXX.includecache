@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sergey/Documents/TUM/1algsPractikum/hw7/A/main.cpp
+iostream
+-
+list
+-
+queue
+-
+unordered_map
+-
+algorithm
+-
+
