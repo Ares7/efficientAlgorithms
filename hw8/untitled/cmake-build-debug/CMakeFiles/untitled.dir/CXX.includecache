@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/sergey/Documents/TUM/1algsPractikum/hw8/B/main.cpp
+/Users/sergey/Documents/TUM/1algsPractikum/hw8/untitled/main.cpp
 iostream
 -
 vector
@@ -16,5 +16,7 @@ algorithm
 chrono
 -
 cmath
+-
+map
 -
 
