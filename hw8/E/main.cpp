@@ -26,7 +26,8 @@ long long combinations(long long n, long long k, long long p){
 
     map<std::pair<long long, long long>, long long>::iterator it;
 
-    if((it = memo.find(std::make_pair(n, k))) != memo.end()) {
+    if((it = memo.find(std::make_pair(n, k))) != memo.end())
+    {
         return it->second;
     }
     else
@@ -69,6 +70,6 @@ int main()
 
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(t2 - t1).count();
-    //cout << duration;
+    cout << duration;
     return 0;
 }

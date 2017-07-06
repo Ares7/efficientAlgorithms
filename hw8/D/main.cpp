@@ -68,8 +68,8 @@ int main()
         uint64_t *arr, *fr_came;
         arr = new uint64_t[15];
 
-        //15^2 * 100
-        fr_came = new uint64_t[30000];
+        //~2*15^2 * 100
+        fr_came = new uint64_t[40000];
         vfr.clear();
 
         //lcm(a,b,c) = lcm(lcm(a,b),c)
@@ -129,6 +129,6 @@ int main()
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(t2 - t1).count();
     //cout << duration;
-    cout << sizeof(uint64_t);
+    //cout << sizeof(uint64_t);
     return 0;
 }

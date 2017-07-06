@@ -23,21 +23,15 @@ vector<int> vpr;
 
 int calcTwoPrimes(vsol &vs, int l)
 {
-
     for (int j = 0; j < vpr.size(); ++j)
     {
-        for (int k = 0; k < vpr.size(); ++k)
+        if (binary_search(vpr.begin(), vpr.end(), vnums[l]-vpr[j]))
         {
-
-            if (vpr[j] + vpr[k] == vnums[l])
-            {
-                vs.els.push_back(vpr[j]);
-                vs.els.push_back(vpr[k]);
-
-                return 0;
-            }
-
+            vs.els.push_back(vpr[j]);
+            vs.els.push_back(vnums[l]-vpr[j]);
+            return 0;
         }
+
     }
 
     return -1;
@@ -50,20 +44,15 @@ int calcThreePrimes(vsol &vs, int l)
     {
         for (int j = 0; j < vpr.size(); ++j)
         {
-            for (int k = 0; k < vpr.size(); ++k)
+            //k
+            if (binary_search(vpr.begin(), vpr.end(), vnums[l]-vpr[i]-vpr[j]))
             {
-
-                if (vpr[i] + vpr[j] + vpr[k] == vnums[l])
-                {
-                    vs.els.push_back(vpr[i]);
-                    vs.els.push_back(vpr[j]);
-                    vs.els.push_back(vpr[k]);
-
-                    return 0;
-                }
-
-
+                vs.els.push_back(vpr[i]);
+                vs.els.push_back(vpr[j]);
+                vs.els.push_back(vnums[l]-vpr[i]-vpr[j]);
+                return 0;
             }
+
         }
     }
     return -1;
@@ -156,7 +145,6 @@ int main()
 
 
 
-
     for (int l = 0; l < v.size(); ++l)
     {
         cout << "Case #" << l + 1 << ": ";
@@ -170,6 +158,6 @@ int main()
 
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(t2 - t1).count();
-    cout << duration;
+    //cout << duration;
     return 0;
 }
