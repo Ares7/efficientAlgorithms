@@ -4,14 +4,20 @@
 #include <chrono>
 #include <cmath>
 #include <sstream>
+#include <unordered_map>
 
 using namespace std::chrono;
 using namespace std;
 
-
+//partially adapted from geeksforgeeks.com
 // Define Infinite (Using INT_MAX caused overflow problems)
 #define INF 10000
 
+struct SimpleHash {
+    size_t operator()(const std::pair<int, int>& p) const {
+        return p.first ^ p.second;
+    }
+};
 
 typedef struct cords
 {
@@ -26,7 +32,7 @@ typedef struct vsol
 } vsol;
 
 vector<string> v;
-
+unordered_map< pair<int, int>, int, SimpleHash> visp;
 
 
 struct Point
@@ -98,25 +104,32 @@ bool isInside(Point polygon[], int n, Point p)
     if (n < 3)  return false;
 
     // Create a point for line segment from p to infinite
-    Point extreme = {INF, p.y};
+    Point extreme = {INF-2, INF-1};
 
     // Count intersections of the above line with sides of polygon
     int count = 0, i = 0;
     do
     {
-        int next = (i+1)%n;
+        int next = (i+2)%n;
 
         // Check if the line segment from 'p' to 'extreme' intersects
         // with the line segment from 'polygon[i]' to 'polygon[next]'
-        if (doIntersect(polygon[i], polygon[next], p, extreme))
+        if (doIntersect(polygon[i], polygon[i+1], p, extreme) )
         {
             // If the point 'p' is colinear with line segment 'i-next',
             // then check if it lies on segment. If it lies, return true,
             // otherwise false
-            if (orientation(polygon[i], p, polygon[next]) == 0)
-                return onSegment(polygon[i], p, polygon[next]);
+            if (orientation(polygon[i], p, polygon[i+1]) == 0)
+                return onSegment(polygon[i], p, polygon[i+1]);
 
-            count++;
+            if(visp[make_pair(polygon[i].x, polygon[i].y)] != 1 && visp[make_pair(polygon[i+1].x, polygon[i+1].y)] != 1)
+            {
+                visp[make_pair(polygon[i].x, polygon[i].y)] = 1;
+                visp[make_pair(polygon[i+1].x, polygon[i+1].y)] = 1;
+
+                count++;
+            }
+
         }
         i = next;
     } while (i != 0);
@@ -152,17 +165,20 @@ int main()
         int n = vs.n*2;
 
         cin.ignore();
-        string line;
+        string x1, y1, x2, y2;
         int ix = 1, ixP = 0;
         while(ix <= vs.n)
         {
-            std::getline(cin, line, '\n');
-            istringstream ss(line);
-            istream_iterator<std::string> begin(ss), end;
-            vector<std::string> words(begin, end);
+            std::getline(cin, x1, ' ');
+            std::getline(cin, y1, ' ');
+            std::getline(cin, x2, ' ');
+            std::getline(cin, y2, '\n');
+            cd.x1 = stoi(x1);
+            cd.y1 = stoi(y1);
 
-            int n = words.size() - 1;
-            cd= { stoi(words[0]), stoi(words[n-2]),stoi(words[n-1]), stoi(words[n]) };
+            cd.x2 = stoi(x2);
+            cd.y2 = stoi(y2);
+
             ix++;
 
             vs.vin.push_back(cd);

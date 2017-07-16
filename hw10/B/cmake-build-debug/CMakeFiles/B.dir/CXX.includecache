@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/sergey/Documents/TUM/1algsPractikum/hw10/A/main.cpp
+/Users/sergey/Documents/TUM/1algsPractikum/hw10/B/main.cpp
 iostream
 -
 vector
@@ -20,5 +20,9 @@ cmath
 sstream
 -
 unordered_map
+-
+stack
+-
+stdlib.h
 -
 
