@@ -12,11 +12,12 @@ using namespace std::chrono;
 using namespace std;
 
 //partially adapted from http://www.geeksforgeeks.org/convex-hull-set-2-graham-scan/
-
+// and http://www.mathopenref.com/coordpolygonarea.html
 typedef struct cords
 {
     int x, y, z, t;
 } cords;
+
 
 typedef struct vsol
 {
@@ -24,20 +25,20 @@ typedef struct vsol
     vector<cords> vin;
 } vsol;
 
+
 struct Point
 {
     int x, y;
 };
 
 vector<vsol> v;
+
+
+vector<double> vres;
 // A globle point needed for  sorting points with reference
 // to  the first point Used in compare function of qsort()
 Point p0;
 
-
-bool compareByID(const cords &a, const cords &b) {
-    return (a.x < b.x) || (a.x == b.x  && a.y < b.y);
-}
 
 // A utility function to find next to top in a stack
 Point nextToTop(stack<Point> &S)
@@ -170,20 +171,35 @@ void convexHull(Point points[], int n)
     {
         ix++;
         Point p = S.top();
-        //cout << "(" << p.x << ", " << p.y <<")" << endl;
         cor.x = p.x;
         cor.y = p.y;
         vs.vin.push_back(cor);
         S.pop();
     }
     vs.n  = ix;
-    sort(vs.vin.begin(), vs.vin.end(), compareByID);
+    //sort(vs.vin.begin(), vs.vin.end(), compareByID);
 
     //put results to the final vector:
     v.push_back(vs);
 }
 
 
+double calcArea(int cs)
+{
+    double area = 0.0;
+    int tres = 0;
+
+    for (int i = 0; i < v[cs].n -1; ++i)
+    {
+        tres = (double)(v[cs].vin[i].x * v[cs].vin[i+1].y - v[cs].vin[i].y * v[cs].vin[i+1].x);
+        area+=tres;
+    }
+    tres = (double)(v[cs].vin[v[cs].n -1].x * v[cs].vin[0].y - v[cs].vin[v[cs].n -1].y * v[cs].vin[0].x);
+    area+=tres;
+    area = (double)abs(area)/2;
+
+    return area;
+}
 
 int main()
 {
@@ -210,7 +226,7 @@ int main()
 
         for (int j = 0; j < vs.n; ++j)
         {
-            cin >> cd.x >> cd.y >> cd.z >> cd.t;
+            cin >> cd.x >> cd.y;
 
             vs.vin.push_back(cd);
         }
@@ -226,20 +242,18 @@ int main()
         }
         convexHull(points, vs.n);
 
+        //calc the volume by doubling the Area for the given case:
+        vres.push_back(calcArea(i-1) * 2);
+
+
     }
 
+    cout << std::fixed;
     for (int l = 0; l < v.size(); ++l)
     {
         cout << "Case #" << l + 1 << ": ";
+        cout<< vres[l];
         cout << endl;
-        cout<< v[l].n;
-        cout << endl;
-        for (int i = 0; i < v[l].n; ++i)
-        {
-            cout<< v[l].vin[i].x << " " << v[l].vin[i].y;
-            cout << endl;
-        }
-        //cout << endl;
     }
 
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
