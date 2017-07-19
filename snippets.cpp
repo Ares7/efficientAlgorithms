@@ -110,3 +110,17 @@ for (int i = 0; i < y; i++)
 }
 solveNQUtil(board);
 
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    float f = 1.66f;
+    int d = (int)f;
+    double g = (double)d;
+    cout.precision(6);
+    cout << std::fixed;
+    cout<<g<<"\n";
+}

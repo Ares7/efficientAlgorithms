@@ -105,6 +105,7 @@ bool isInside(Point polygon[], int n, Point p)
 
     // Create a point for line segment from p to infinite
     Point extreme = {INF-2, INF-1};
+    visp.clear();
 
     // Count intersections of the above line with sides of polygon
     int count = 0, i = 0;
@@ -121,14 +122,16 @@ bool isInside(Point polygon[], int n, Point p)
             // otherwise false
             if (orientation(polygon[i], p, polygon[i+1]) == 0)
                 return onSegment(polygon[i], p, polygon[i+1]);
-
-            if(visp[make_pair(polygon[i].x, polygon[i].y)] != 1 && visp[make_pair(polygon[i+1].x, polygon[i+1].y)] != 1)
-            {
-                visp[make_pair(polygon[i].x, polygon[i].y)] = 1;
-                visp[make_pair(polygon[i+1].x, polygon[i+1].y)] = 1;
+//
+//            if(visp[make_pair(polygon[i].x, polygon[i].y)] != 1 &&
+//                    visp[make_pair(polygon[i+1].x, polygon[i+1].y)] != 1
+//                    )
+//            {
+//                visp[make_pair(polygon[i].x, polygon[i].y)] = 1;
+//                visp[make_pair(polygon[i+1].x, polygon[i+1].y)] = 1;
 
                 count++;
-            }
+           // }
 
         }
         i = next;
