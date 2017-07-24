@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sergey/Documents/TUM/1algsPractikum/hw11/C/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+sstream
+-
+
